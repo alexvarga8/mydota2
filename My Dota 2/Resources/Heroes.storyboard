@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ONs-rS-TuQ">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Heroes-->
+        <scene sceneID="69K-mq-pRy">
+            <objects>
+                <viewController id="igd-zU-dnc" customClass="HeroVC" customModule="My_Dota_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dAL-dJ-vYM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="hIz-sm-8xZ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pO3-dB-Ucw">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="s9l-bM-5kj">
+                                    <size key="itemSize" width="180" height="180"/>
+                                    <size key="headerReferenceSize" width="50" height="100"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeroCell" id="UP2-NK-bwN" customClass="HeroCollectionViewCell" customModule="My_Dota_2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="100" width="180" height="180"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x2g-3j-9pv">
+                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Terrorblade" translatesAutoresizingMaskIntoConstraints="NO" id="jzN-X9-8dw">
+                                                            <rect key="frame" x="0.0" y="0.0" width="180" height="135"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="135" id="Xke-Vo-xPD"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LlQ-fo-Ywx" customClass="GradientView" customModule="My_Dota_2" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="143" width="180" height="37"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2q-nK-QKe">
+                                                            <rect key="frame" x="5" y="151" width="170" height="24"/>
+                                                            <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="18"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="K2q-nK-QKe" secondAttribute="bottom" constant="5" id="7cr-YX-pFO"/>
+                                                        <constraint firstItem="LlQ-fo-Ywx" firstAttribute="leading" secondItem="x2g-3j-9pv" secondAttribute="leading" id="Drc-Dr-eoa"/>
+                                                        <constraint firstAttribute="bottom" secondItem="LlQ-fo-Ywx" secondAttribute="bottom" id="Wf8-g1-EOE"/>
+                                                        <constraint firstAttribute="trailing" secondItem="LlQ-fo-Ywx" secondAttribute="trailing" id="XTe-qh-ygG"/>
+                                                        <constraint firstAttribute="trailing" secondItem="K2q-nK-QKe" secondAttribute="trailing" constant="5" id="dOc-VT-BRF"/>
+                                                        <constraint firstItem="K2q-nK-QKe" firstAttribute="leading" secondItem="x2g-3j-9pv" secondAttribute="leading" constant="5" id="h7a-Ge-rvn"/>
+                                                        <constraint firstItem="LlQ-fo-Ywx" firstAttribute="top" secondItem="K2q-nK-QKe" secondAttribute="top" constant="-8" id="iqe-as-eZr"/>
+                                                        <constraint firstItem="jzN-X9-8dw" firstAttribute="leading" secondItem="x2g-3j-9pv" secondAttribute="leading" id="ix9-7t-7cI"/>
+                                                        <constraint firstItem="jzN-X9-8dw" firstAttribute="top" secondItem="x2g-3j-9pv" secondAttribute="top" id="oLg-Lu-Qrb"/>
+                                                        <constraint firstAttribute="trailing" secondItem="jzN-X9-8dw" secondAttribute="trailing" id="xLE-FD-gsf"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="x2g-3j-9pv" firstAttribute="leading" secondItem="UP2-NK-bwN" secondAttribute="leading" id="AyL-u3-Xd1"/>
+                                            <constraint firstAttribute="trailing" secondItem="x2g-3j-9pv" secondAttribute="trailing" id="VA4-1L-ba2"/>
+                                            <constraint firstItem="x2g-3j-9pv" firstAttribute="top" secondItem="UP2-NK-bwN" secondAttribute="top" id="VoU-1T-2MJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="x2g-3j-9pv" secondAttribute="bottom" id="oQ4-Tr-6Ww"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="jzN-X9-8dw" id="o0D-Mp-lSH"/>
+                                            <outlet property="nameLabel" destination="K2q-nK-QKe" id="Bw3-YK-9G4"/>
+                                            <segue destination="wvN-2P-mrm" kind="show" identifier="HeroDetailSegue" id="83X-AW-gBL"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="HeroHeader" id="ekX-X9-Nl3" customClass="SearchCollectionReusableView" customModule="My_Dota_2" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <searchBar contentMode="redraw" fixedFrame="YES" barStyle="black" searchBarStyle="prominent" placeholder="Search Heroes By Name" showsScopeBar="YES" translatesAutoresizingMaskIntoConstraints="NO" id="faB-fz-2IB">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="barTintColor" red="0.24320203065872192" green="0.23558604717254639" blue="0.20783030986785889" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <scopeButtonTitles>
+                                                <string>All</string>
+                                                <string>Agility</string>
+                                                <string>Strength</string>
+                                                <string>Intelligence</string>
+                                            </scopeButtonTitles>
+                                            <connections>
+                                                <outlet property="delegate" destination="igd-zU-dnc" id="vlA-RE-R1k"/>
+                                            </connections>
+                                        </searchBar>
+                                    </subviews>
+                                    <connections>
+                                        <outlet property="heroSearchBar" destination="faB-fz-2IB" id="Tom-T3-rQP"/>
+                                    </connections>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="igd-zU-dnc" id="ZMt-DB-T8L"/>
+                                    <outlet property="delegate" destination="igd-zU-dnc" id="ctW-jd-h69"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pO3-dB-Ucw" firstAttribute="trailing" secondItem="d6q-fT-J30" secondAttribute="trailing" id="0ww-Xu-Edc"/>
+                            <constraint firstItem="d6q-fT-J30" firstAttribute="trailing" secondItem="hIz-sm-8xZ" secondAttribute="trailing" id="Ekp-Am-gt4"/>
+                            <constraint firstItem="hIz-sm-8xZ" firstAttribute="top" secondItem="dAL-dJ-vYM" secondAttribute="top" id="Wgj-y1-LE1"/>
+                            <constraint firstAttribute="bottom" secondItem="pO3-dB-Ucw" secondAttribute="bottom" id="bTF-LT-PDu"/>
+                            <constraint firstItem="pO3-dB-Ucw" firstAttribute="top" secondItem="d6q-fT-J30" secondAttribute="top" id="hoZ-6s-BSb"/>
+                            <constraint firstItem="pO3-dB-Ucw" firstAttribute="leading" secondItem="d6q-fT-J30" secondAttribute="leading" id="iTs-0n-gQz"/>
+                            <constraint firstItem="hIz-sm-8xZ" firstAttribute="bottom" secondItem="d6q-fT-J30" secondAttribute="bottom" id="q35-3M-IKX"/>
+                            <constraint firstItem="hIz-sm-8xZ" firstAttribute="leading" secondItem="d6q-fT-J30" secondAttribute="leading" id="yfY-ej-DwU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="d6q-fT-J30"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Heroes" largeTitleDisplayMode="always" id="1ce-lx-bRl"/>
+                    <connections>
+                        <outlet property="collectionView" destination="pO3-dB-Ucw" id="PCW-Xe-j3p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UAE-qr-UKN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3886.9565217391309" y="-290.625"/>
+        </scene>
+        <!--Hero DetailVC-->
+        <scene sceneID="x0w-Qw-N7r">
+            <objects>
+                <viewController storyboardIdentifier="HeroDetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wvN-2P-mrm" customClass="HeroDetailVC" customModule="My_Dota_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XGr-t9-6Ml">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="SfU-RW-88J">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hMU-0e-neI" userLabel="Stats">
+                                <rect key="frame" x="15" y="387.5" width="384" height="105"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="nhn-32-ven">
+                                        <rect key="frame" x="0.0" y="0.0" width="192" height="105"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OY2-us-1rQ" userLabel="Intelligence">
+                                                <rect key="frame" x="0.0" y="0.0" width="133" height="35"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="int" translatesAutoresizingMaskIntoConstraints="NO" id="MaL-mt-3Fx">
+                                                        <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="35" id="WCK-hW-dts"/>
+                                                            <constraint firstAttribute="height" constant="35" id="vat-Kn-FIC"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intelligence" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZi-OD-Kn9">
+                                                        <rect key="frame" x="43" y="0.0" width="90" height="35"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="18"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="US0-U9-Myn" userLabel="Agility">
+                                                <rect key="frame" x="0.0" y="35" width="98" height="35"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="agi" translatesAutoresizingMaskIntoConstraints="NO" id="ID1-Dr-nif">
+                                                        <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="35" id="HOx-ap-5Vc"/>
+                                                            <constraint firstAttribute="width" constant="35" id="IMw-kJ-ULo"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agility" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eC3-wC-0I0">
+                                                        <rect key="frame" x="43" y="0.0" width="55" height="35"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="18"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="n8Z-Lv-ggq" userLabel="Strength">
+                                                <rect key="frame" x="0.0" y="70" width="112" height="35"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="str" translatesAutoresizingMaskIntoConstraints="NO" id="BzB-MG-48f">
+                                                        <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="35" id="5wH-ce-xis"/>
+                                                            <constraint firstAttribute="width" constant="35" id="t6P-r5-07z"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Strength" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9L-cU-09O">
+                                                        <rect key="frame" x="43" y="0.0" width="69" height="35"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="18"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="fvz-Ta-CKt">
+                                        <rect key="frame" x="192" y="0.0" width="192" height="105"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ynR-RX-KNU" userLabel="Attack">
+                                                <rect key="frame" x="0.0" y="0.0" width="98" height="35"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="attack" translatesAutoresizingMaskIntoConstraints="NO" id="r9s-ur-VAm">
+                                                        <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="35" id="hvP-MN-rRr"/>
+                                                            <constraint firstAttribute="width" constant="35" id="q7G-up-nop"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mnc-J3-cOo">
+                                                        <rect key="frame" x="43" y="0.0" width="55" height="35"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="18"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="H8e-XA-HGK" userLabel="Movement">
+                                                <rect key="frame" x="0.0" y="35" width="127.5" height="35"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movement" translatesAutoresizingMaskIntoConstraints="NO" id="ojP-vL-g0n">
+                                                        <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="35" id="Cfm-o5-99q"/>
+                                                            <constraint firstAttribute="height" constant="35" id="sHg-aa-o6p"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movement" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIn-f2-eBA">
+                                                        <rect key="frame" x="43" y="0.0" width="84.5" height="35"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="18"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="S2K-IQ-C7h" userLabel="Armor">
+                                                <rect key="frame" x="0.0" y="70" width="95.5" height="35"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="armor" translatesAutoresizingMaskIntoConstraints="NO" id="jXK-ff-fOi">
+                                                        <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="35" id="Zi3-ra-k83"/>
+                                                            <constraint firstAttribute="width" constant="35" id="u9o-Xw-RcM"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Armor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMZ-jq-Pe4">
+                                                        <rect key="frame" x="43" y="0.0" width="52.5" height="35"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="18"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zXV-26-rlF">
+                                <rect key="frame" x="20" y="522.5" width="374" height="329.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="q8d-Tv-Sr5" userLabel="Hero">
+                                <rect key="frame" x="20" y="138" width="374" height="219.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hero Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBh-xh-gXf">
+                                        <rect key="frame" x="122.5" y="0.0" width="129.5" height="33"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m9H-Bp-vrh">
+                                        <rect key="frame" x="62" y="35" width="250" height="150"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="P6Z-P7-f6C"/>
+                                            <constraint firstAttribute="width" constant="250" id="pjl-QP-oIt"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="2Px-mQ-ekF">
+                                        <rect key="frame" x="62.5" y="187" width="249" height="32.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attack Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQ2-Mw-b2I">
+                                                <rect key="frame" x="0.0" y="0.0" width="133" height="32.5"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attribute" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D3v-hp-zCw">
+                                                <rect key="frame" x="145" y="0.0" width="104" height="32.5"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qvB-bK-Hac" firstAttribute="bottom" secondItem="zXV-26-rlF" secondAttribute="bottom" constant="10" id="7eH-3l-MNf"/>
+                            <constraint firstItem="qvB-bK-Hac" firstAttribute="trailing" secondItem="SfU-RW-88J" secondAttribute="trailing" id="F15-XR-5ay"/>
+                            <constraint firstItem="qvB-bK-Hac" firstAttribute="trailing" secondItem="hMU-0e-neI" secondAttribute="trailing" constant="15" id="IAg-zl-eiE"/>
+                            <constraint firstItem="q8d-Tv-Sr5" firstAttribute="leading" secondItem="qvB-bK-Hac" secondAttribute="leading" constant="20" id="XY8-O5-BsH"/>
+                            <constraint firstItem="zXV-26-rlF" firstAttribute="leading" secondItem="qvB-bK-Hac" secondAttribute="leading" constant="20" id="a4i-KN-rhV"/>
+                            <constraint firstItem="zXV-26-rlF" firstAttribute="top" secondItem="hMU-0e-neI" secondAttribute="bottom" constant="30" id="cy0-m1-JMk"/>
+                            <constraint firstItem="SfU-RW-88J" firstAttribute="leading" secondItem="qvB-bK-Hac" secondAttribute="leading" id="eA7-Yq-Jjp"/>
+                            <constraint firstItem="hMU-0e-neI" firstAttribute="top" secondItem="q8d-Tv-Sr5" secondAttribute="bottom" constant="30" id="hEn-8p-aRI"/>
+                            <constraint firstItem="qvB-bK-Hac" firstAttribute="trailing" secondItem="q8d-Tv-Sr5" secondAttribute="trailing" constant="20" id="hjL-b1-0Cg"/>
+                            <constraint firstItem="SfU-RW-88J" firstAttribute="top" secondItem="qvB-bK-Hac" secondAttribute="top" constant="-44" id="i8l-gN-bW9"/>
+                            <constraint firstItem="qvB-bK-Hac" firstAttribute="bottom" secondItem="SfU-RW-88J" secondAttribute="bottom" constant="-34" id="k3L-yg-pS1"/>
+                            <constraint firstItem="qvB-bK-Hac" firstAttribute="trailing" secondItem="zXV-26-rlF" secondAttribute="trailing" constant="20" id="n7x-4r-Z5R"/>
+                            <constraint firstItem="hMU-0e-neI" firstAttribute="leading" secondItem="qvB-bK-Hac" secondAttribute="leading" constant="15" id="sC5-dy-ySy"/>
+                            <constraint firstItem="q8d-Tv-Sr5" firstAttribute="top" secondItem="qvB-bK-Hac" secondAttribute="top" constant="50" id="w3i-Hh-71h"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qvB-bK-Hac"/>
+                    </view>
+                    <connections>
+                        <outlet property="agilityLabel" destination="eC3-wC-0I0" id="lof-O8-XHI"/>
+                        <outlet property="armorLabel" destination="MMZ-jq-Pe4" id="dE5-QQ-RZH"/>
+                        <outlet property="attackLabel" destination="Mnc-J3-cOo" id="E4o-uB-3AI"/>
+                        <outlet property="attackTypeLabel" destination="LQ2-Mw-b2I" id="oXV-Ee-K2Q"/>
+                        <outlet property="attributeLabel" destination="D3v-hp-zCw" id="KyD-Lq-wNw"/>
+                        <outlet property="bioTextView" destination="zXV-26-rlF" id="48K-qQ-Rih"/>
+                        <outlet property="imageView" destination="m9H-Bp-vrh" id="95H-X2-Z7f"/>
+                        <outlet property="intelligenceLabel" destination="MZi-OD-Kn9" id="8ca-qK-tlR"/>
+                        <outlet property="movementLabel" destination="ZIn-f2-eBA" id="Fy8-lc-MMn"/>
+                        <outlet property="nameLabel" destination="zBh-xh-gXf" id="tYA-VY-nsC"/>
+                        <outlet property="strengthLabel" destination="S9L-cU-09O" id="hzn-jt-b74"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ou-Gb-IsF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4960.8695652173919" y="-291.29464285714283"/>
+        </scene>
+        <!--Heroes-->
+        <scene sceneID="1pw-Ay-ux3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ONs-rS-TuQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Heroes" image="heroIcon" id="qQc-lc-wOO"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" alpha="0.69999999999999996" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fdF-p8-OBu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.24716907739999999" green="0.2356629968" blue="0.199983567" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="igd-zU-dnc" kind="relationship" relationship="rootViewController" id="AB4-oY-Bwx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dq6-jW-1k1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2944.8000000000002" y="-290.39408866995075"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Terrorblade" width="256" height="144"/>
+        <image name="agi" width="33" height="33"/>
+        <image name="armor" width="39" height="37"/>
+        <image name="attack" width="46" height="35"/>
+        <image name="background" width="640" height="1136"/>
+        <image name="heroIcon" width="50" height="50"/>
+        <image name="int" width="33" height="33"/>
+        <image name="movement" width="63" height="39"/>
+        <image name="str" width="33" height="33"/>
+    </resources>
+</document>
