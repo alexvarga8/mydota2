@@ -16,7 +16,7 @@ extension HeroVC {
         
         CustomLoader.instance.showLoaderView()
         
-        DispatchQueue.main.async {
+        //DispatchQueue.main.async {
             Alamofire.request("https://api.stratz.com/api/v1/Hero").responseJSON(completionHandler:
                 { (response) in
                     
@@ -63,7 +63,7 @@ extension HeroVC {
                     }
                     
             })
-        }
+        //}
     }
      
 }

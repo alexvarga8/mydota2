@@ -15,15 +15,15 @@ extension ItemVC {
     
     func fetchDotaItemData() {
         
-        //self.showSpinner(onView: self.view)
-        CustomLoader.instance.showLoaderView()
+        self.showSpinner(onView: self.view)
+        //CustomLoader.instance.showLoaderView()
         
         DispatchQueue.main.async {
             Alamofire.request("https://api.stratz.com/api/v1/Item").responseJSON(completionHandler:
                 { (response) in
                     
-                    //self.removeSpinner()
-                    CustomLoader.instance.hideLoaderView()
+                    self.removeSpinner()
+                    //CustomLoader.instance.hideLoaderView()
                     
                     
                     switch response.result {
@@ -33,13 +33,14 @@ extension ItemVC {
                     for i in 1..<json.count {
                         
                         let itemName = json[String(i)]["displayName"].stringValue
-                        let itemPhoto = json[String(i)]["displayName"].stringValue
+                        let itemPhoto = json[String(i)]["image"].stringValue
                         let itemDescription = json[String(i)]["language"][0]["lore"][0].stringValue
                         let needsComponents = json[String(i)]["stat"]["needsComponents"].boolValue
                         let itemIndex = json[String(i)]["id"].stringValue
                         let isRecipe = json[String(i)]["stat"]["isRecipe"].boolValue
+                        let itemCosts = json[String(i)]["stat"]["cost"].intValue
                         if !isRecipe && !itemName.contains("Recipe") && !itemIndex.isEmpty {
-                            let dotaItem = DotaItem(itemName: itemName, itemPhoto: itemPhoto, itemDescription: itemDescription, needsComponents: needsComponents, itemIndex: itemIndex)
+                            let dotaItem = DotaItem(itemName: itemName, itemPhoto: itemPhoto, itemDescription: itemDescription, needsComponents: needsComponents, itemIndex: itemIndex, itemCosts: itemCosts)
                             self.dotaItemData.append(dotaItem)
                             self.currentDotaItems = self.dotaItemData
                             print(dotaItem.itemName)

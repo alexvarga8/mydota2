@@ -15,12 +15,14 @@ class ItemDetailVC: UIViewController {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var costsLabel: UILabel!
+    @IBOutlet var attributesLabel: UILabel!
     
     var image: String?
     var name: String?
     var itemDescritpion: String?
     var needsComponents: Bool?
     var costs: Int?
+    var attributes: [String]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +46,8 @@ class ItemDetailVC: UIViewController {
         descriptionLabel.text = itemDescritpion
         
         costsLabel.text = String(costs!)
+        
+        attributesLabel.text = attributes?.joined(separator: "\n")
         
     }
 

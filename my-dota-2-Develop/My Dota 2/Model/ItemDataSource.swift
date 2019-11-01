@@ -40,10 +40,16 @@ extension ItemVC {
                         let isRecipe = json[String(i)]["stat"]["isRecipe"].boolValue
                         let itemCosts = json[String(i)]["stat"]["cost"].intValue
                         if !isRecipe && !itemName.contains("Recipe") && !itemIndex.isEmpty {
-                            let dotaItem = DotaItem(itemName: itemName, itemPhoto: itemPhoto, itemDescription: itemDescription, needsComponents: needsComponents, itemIndex: itemIndex, itemCosts: itemCosts)
-                            self.dotaItemData.append(dotaItem)
-                            self.currentDotaItems = self.dotaItemData
-                            print(dotaItem.itemName)
+                            let attributeIndex = json[String(i)]["language"][0]["attributes"].count
+                            var attributes: [String] = []
+                            for j in 0..<attributeIndex {
+                                let attribute = json[String(i)]["language"][0]["attributes"][j].stringValue
+                                attributes.append(attribute)}
+                                let dotaItem = DotaItem(itemName: itemName, itemPhoto: itemPhoto, itemDescription: itemDescription, needsComponents: needsComponents, itemIndex: itemIndex, itemCosts: itemCosts, attributes: attributes)
+                                self.dotaItemData.append(dotaItem)
+                                self.currentDotaItems = self.dotaItemData
+                                //print(dotaItem.itemName)
+                            
                         }
                         
                         

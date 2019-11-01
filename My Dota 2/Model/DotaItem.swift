@@ -14,4 +14,5 @@ struct DotaItem {
     var itemDescription: String
     var needsComponents: Bool
     var itemIndex: String
+    var itemCosts: Int
 }

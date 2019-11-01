@@ -14,7 +14,6 @@ class HeroDetailVC: UIViewController {
     
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var attributeLabel: UILabel!
     @IBOutlet var attackTypeLabel: UILabel!
     @IBOutlet var intelligenceLabel: UILabel!
     @IBOutlet var agilityLabel: UILabel!
@@ -23,6 +22,9 @@ class HeroDetailVC: UIViewController {
     @IBOutlet var movementLabel: UILabel!
     @IBOutlet var armorLabel: UILabel!
     @IBOutlet var bioTextView: UITextView!
+    @IBOutlet var intelligenceImage: UIImageView!
+    @IBOutlet var agilityImage: UIImageView!
+    @IBOutlet var strengthImage: UIImageView!
     
     var image: String?
     var name: String?
@@ -39,6 +41,12 @@ class HeroDetailVC: UIViewController {
     var moveSpeed: Int?
     var startingArmor: Float?
     var bio: String?
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        bioTextView.contentOffset = .zero
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,15 +103,21 @@ class HeroDetailVC: UIViewController {
         
         nameLabel.text = name
         
-        switch attribute {
-        case "agi":
-            attributeLabel.text = "Agility"
-        case "str":
-            attributeLabel.text = "Strength"
-        case "int":
-            attributeLabel.text = "Inteligence"
-        default:
-            attributeLabel.text = ""
+        if attribute == "agi" {
+            agilityImage.layer.borderColor = UIColor(red: 101.0, green: 255.0, blue: 0.0, alpha: 1.0).cgColor
+            agilityImage.layer.cornerRadius = 18.0
+            agilityImage.contentMode = .scaleAspectFit
+            agilityImage.layer.borderWidth = 2
+        } else if attribute == "int" {
+            intelligenceImage.layer.borderColor = UIColor(red: 101.0, green: 255.0, blue: 0.0, alpha: 1.0).cgColor
+            intelligenceImage.layer.cornerRadius = 18.0
+            intelligenceImage.contentMode = .scaleAspectFit
+            intelligenceImage.layer.borderWidth = 2
+        } else if attribute == "str" {
+            strengthImage.layer.borderColor = UIColor(red: 101.0, green: 255.0, blue: 0.0, alpha: 1.0).cgColor
+            strengthImage.layer.cornerRadius = 18.0
+            strengthImage.contentMode = .scaleAspectFit
+            strengthImage.layer.borderWidth = 2
         }
         
         attackTypeLabel.text = attackType

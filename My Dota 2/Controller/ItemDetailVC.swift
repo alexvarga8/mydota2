@@ -14,31 +14,36 @@ class ItemDetailVC: UIViewController {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet var costsLabel: UILabel!
     
     var image: String?
     var name: String?
     var itemDescritpion: String?
-    
+    var needsComponents: Bool?
+    var costs: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        imageView.layer.cornerRadius = 15.0
 
-        let baseURL = "http://cdn.dota2.com/apps/dota2/images/items/"
-        var photoURL = name!.lowercased()
-        
-        switch photoURL {
-        case "blink dagger":
-            photoURL = "blink_lg.png"
-        default:
-            photoURL = photoURL.replacingOccurrences(of: " ", with: "_") + "_lg.png"
-        }
-        
+        let baseURL = "https://steamcdn-a.akamaihd.net/apps/dota2/images/items/"
+        let photoURL = image!
         let url = URL(string: baseURL + photoURL)
+        
         imageView.kf.setImage(with: url)
+        
+        if needsComponents! {
+            nameLabel.textColor = UIColor.black
+        } else if !needsComponents! {
+            nameLabel.textColor = UIColor.white
+        }
         
         nameLabel.text = name
         nameLabel.adjustsFontSizeToFitWidth = true
         descriptionLabel.text = itemDescritpion
+        
+        costsLabel.text = String(costs!)
         
     }
 

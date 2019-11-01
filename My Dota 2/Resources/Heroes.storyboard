@@ -74,6 +74,7 @@
                                                 </view>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" red="0.37708407640000002" green="0.3262634277" blue="0.24701842669999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstItem="x2g-3j-9pv" firstAttribute="leading" secondItem="UP2-NK-bwN" secondAttribute="leading" id="AyL-u3-Xd1"/>
                                             <constraint firstAttribute="trailing" secondItem="x2g-3j-9pv" secondAttribute="trailing" id="VA4-1L-ba2"/>
@@ -149,10 +150,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="SfU-RW-88J">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.39741386094543341" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hMU-0e-neI" userLabel="Stats">
-                                <rect key="frame" x="15" y="387.5" width="384" height="105"/>
+                                <rect key="frame" x="15" y="367.5" width="384" height="105"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="nhn-32-ven">
                                         <rect key="frame" x="0.0" y="0.0" width="192" height="105"/>
@@ -275,7 +277,7 @@
                                 </subviews>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zXV-26-rlF">
-                                <rect key="frame" x="20" y="522.5" width="374" height="329.5"/>
+                                <rect key="frame" x="20" y="502.5" width="374" height="349.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -283,7 +285,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="q8d-Tv-Sr5" userLabel="Hero">
-                                <rect key="frame" x="20" y="138" width="374" height="219.5"/>
+                                <rect key="frame" x="20" y="118" width="374" height="219.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hero Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBh-xh-gXf">
                                         <rect key="frame" x="122.5" y="0.0" width="129.5" height="33"/>
@@ -299,23 +301,12 @@
                                             <constraint firstAttribute="width" constant="250" id="pjl-QP-oIt"/>
                                         </constraints>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="2Px-mQ-ekF">
-                                        <rect key="frame" x="62.5" y="187" width="249" height="32.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attack Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQ2-Mw-b2I">
-                                                <rect key="frame" x="0.0" y="0.0" width="133" height="32.5"/>
-                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attribute" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D3v-hp-zCw">
-                                                <rect key="frame" x="145" y="0.0" width="104" height="32.5"/>
-                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attack Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQ2-Mw-b2I">
+                                        <rect key="frame" x="120.5" y="187" width="133" height="32.5"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -330,25 +321,27 @@
                             <constraint firstItem="SfU-RW-88J" firstAttribute="leading" secondItem="qvB-bK-Hac" secondAttribute="leading" id="eA7-Yq-Jjp"/>
                             <constraint firstItem="hMU-0e-neI" firstAttribute="top" secondItem="q8d-Tv-Sr5" secondAttribute="bottom" constant="30" id="hEn-8p-aRI"/>
                             <constraint firstItem="qvB-bK-Hac" firstAttribute="trailing" secondItem="q8d-Tv-Sr5" secondAttribute="trailing" constant="20" id="hjL-b1-0Cg"/>
-                            <constraint firstItem="SfU-RW-88J" firstAttribute="top" secondItem="qvB-bK-Hac" secondAttribute="top" constant="-44" id="i8l-gN-bW9"/>
+                            <constraint firstItem="SfU-RW-88J" firstAttribute="top" secondItem="qvB-bK-Hac" secondAttribute="top" constant="-88" id="i8l-gN-bW9"/>
                             <constraint firstItem="qvB-bK-Hac" firstAttribute="bottom" secondItem="SfU-RW-88J" secondAttribute="bottom" constant="-34" id="k3L-yg-pS1"/>
                             <constraint firstItem="qvB-bK-Hac" firstAttribute="trailing" secondItem="zXV-26-rlF" secondAttribute="trailing" constant="20" id="n7x-4r-Z5R"/>
                             <constraint firstItem="hMU-0e-neI" firstAttribute="leading" secondItem="qvB-bK-Hac" secondAttribute="leading" constant="15" id="sC5-dy-ySy"/>
-                            <constraint firstItem="q8d-Tv-Sr5" firstAttribute="top" secondItem="qvB-bK-Hac" secondAttribute="top" constant="50" id="w3i-Hh-71h"/>
+                            <constraint firstItem="q8d-Tv-Sr5" firstAttribute="top" secondItem="qvB-bK-Hac" secondAttribute="top" constant="30" id="w3i-Hh-71h"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qvB-bK-Hac"/>
                     </view>
                     <connections>
+                        <outlet property="agilityImage" destination="ID1-Dr-nif" id="UoX-LT-Urz"/>
                         <outlet property="agilityLabel" destination="eC3-wC-0I0" id="lof-O8-XHI"/>
                         <outlet property="armorLabel" destination="MMZ-jq-Pe4" id="dE5-QQ-RZH"/>
                         <outlet property="attackLabel" destination="Mnc-J3-cOo" id="E4o-uB-3AI"/>
                         <outlet property="attackTypeLabel" destination="LQ2-Mw-b2I" id="oXV-Ee-K2Q"/>
-                        <outlet property="attributeLabel" destination="D3v-hp-zCw" id="KyD-Lq-wNw"/>
                         <outlet property="bioTextView" destination="zXV-26-rlF" id="48K-qQ-Rih"/>
                         <outlet property="imageView" destination="m9H-Bp-vrh" id="95H-X2-Z7f"/>
+                        <outlet property="intelligenceImage" destination="MaL-mt-3Fx" id="nbc-P2-WV5"/>
                         <outlet property="intelligenceLabel" destination="MZi-OD-Kn9" id="8ca-qK-tlR"/>
                         <outlet property="movementLabel" destination="ZIn-f2-eBA" id="Fy8-lc-MMn"/>
                         <outlet property="nameLabel" destination="zBh-xh-gXf" id="tYA-VY-nsC"/>
+                        <outlet property="strengthImage" destination="BzB-MG-48f" id="54T-CK-dlx"/>
                         <outlet property="strengthLabel" destination="S9L-cU-09O" id="hzn-jt-b74"/>
                     </connections>
                 </viewController>

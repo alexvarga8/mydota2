@@ -18,18 +18,9 @@ class ItemCollectionViewCell: UICollectionViewCell {
         didSet {
             if let dotaItem = dotaItem {
                 
-                let baseURL = "http://cdn.dota2.com/apps/dota2/images/items/"
-                var photoURL = dotaItem.itemName.lowercased()
-                
-                switch photoURL {
-                case "blink dagger":
-                    photoURL = "blink_lg.png"
-                default:
-                    photoURL = photoURL.replacingOccurrences(of: " ", with: "_") + "_lg.png"
-                }
-                
+                let baseURL = "https://steamcdn-a.akamaihd.net/apps/dota2/images/items/"
+                let photoURL = dotaItem.itemPhoto
                 let url = URL(string: baseURL + photoURL)
-                
                 
                 imageView.kf.setImage(with: url)
                 

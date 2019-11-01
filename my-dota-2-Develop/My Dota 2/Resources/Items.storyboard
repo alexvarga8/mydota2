@@ -198,11 +198,30 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ljy-3h-o7O" userLabel="Attributes">
+                                <rect key="frame" x="50" y="296" width="121" height="56.333333333333314"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attributes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRR-nf-7ec">
+                                        <rect key="frame" x="0.0" y="0.0" width="121" height="32.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attributes:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmu-Xd-6Hf">
+                                        <rect key="frame" x="17" y="32.666666666666686" width="87" height="23.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Ljy-3h-o7O" firstAttribute="leading" secondItem="mxy-cP-G33" secondAttribute="leading" constant="50" id="G9J-sx-a9U"/>
                             <constraint firstItem="Hbw-Xf-lze" firstAttribute="top" secondItem="mxy-cP-G33" secondAttribute="top" constant="-44" id="HHh-dY-Kkl"/>
                             <constraint firstItem="Veb-bd-4tW" firstAttribute="leading" secondItem="mxy-cP-G33" secondAttribute="leading" constant="20" id="HPT-Tq-gmZ"/>
+                            <constraint firstItem="Ljy-3h-o7O" firstAttribute="top" secondItem="Veb-bd-4tW" secondAttribute="bottom" constant="30" id="PoG-iw-G0A"/>
                             <constraint firstItem="mxy-cP-G33" firstAttribute="trailing" secondItem="1Ix-Eg-tEE" secondAttribute="trailing" constant="40" id="TsY-M5-ftl"/>
                             <constraint firstItem="mxy-cP-G33" firstAttribute="trailing" secondItem="Hbw-Xf-lze" secondAttribute="trailing" id="XZO-KX-eqc"/>
                             <constraint firstItem="1Ix-Eg-tEE" firstAttribute="leading" secondItem="mxy-cP-G33" secondAttribute="leading" constant="40" id="iEP-cW-od2"/>
@@ -215,6 +234,7 @@
                         <viewLayoutGuide key="safeArea" id="mxy-cP-G33"/>
                     </view>
                     <connections>
+                        <outlet property="attributesLabel" destination="cmu-Xd-6Hf" id="6dN-zU-HON"/>
                         <outlet property="costsLabel" destination="01d-nE-tIO" id="ltF-Kv-nsj"/>
                         <outlet property="descriptionLabel" destination="1Ix-Eg-tEE" id="Yyk-nZ-qtn"/>
                         <outlet property="imageView" destination="wtw-MX-kVo" id="TOe-mY-d1G"/>

@@ -21,11 +21,11 @@ class ItemVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        CustomLoader.instance.setAlpha = 0.2
-        CustomLoader.instance.gifName = "demo2"
-        CustomLoader.instance.viewColor = UIColor.gray
+//        CustomLoader.instance.setAlpha = 0.2
+//        CustomLoader.instance.gifName = "demo2"
+//        CustomLoader.instance.viewColor = UIColor.gray
         
-        let width = view.frame.size.width / 3
+        let width = view.frame.size.width / 4
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: width, height: width)
         layout.sectionHeadersPinToVisibleBounds = true

@@ -40,6 +40,7 @@ extension ItemVC: UICollectionViewDataSource, UICollectionViewDelegate, UISearch
                 dest.itemDescritpion = currentDotaItems[index.row].itemDescription
                 dest.needsComponents = currentDotaItems[index.row].needsComponents
                 dest.costs = currentDotaItems[index.row].itemCosts
+                dest.attributes = currentDotaItems[index.row].attributes
                 
             }
         }
