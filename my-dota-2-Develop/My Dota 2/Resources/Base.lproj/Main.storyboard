@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MainVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="My_Dota_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="dns-Ih-T8D">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Dota 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXX-0i-830">
+                                <rect key="frame" x="117" y="44" width="141" height="39"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H17-ML-xEF" customClass="CustomButton" customModule="My_Dota_2" customModuleProvider="target">
+                                <rect key="frame" x="90" y="578" width="195" height="40"/>
+                                <color key="backgroundColor" red="0.3179945052" green="0.2905706763" blue="0.25488382580000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <state key="normal" title="Let's Get Started">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cWT-un-ncY" kind="show" id="tI0-1P-6Mt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dns-Ih-T8D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5bT-rb-NpF"/>
+                            <constraint firstItem="dns-Ih-T8D" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Ay6-2y-Tx4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dns-Ih-T8D" secondAttribute="trailing" id="GTc-YW-oLk"/>
+                            <constraint firstItem="EXX-0i-830" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="JGG-FV-p2c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="H17-ML-xEF" secondAttribute="bottom" constant="160" id="aK9-N1-AHg"/>
+                            <constraint firstItem="H17-ML-xEF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="b8h-0i-0Ik"/>
+                            <constraint firstAttribute="bottom" secondItem="dns-Ih-T8D" secondAttribute="bottom" id="oJr-ql-DJc"/>
+                            <constraint firstItem="EXX-0i-830" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u6U-4L-yyj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H17-ML-xEF" secondAttribute="trailing" constant="90" id="zfa-Td-hQP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="startButton" destination="H17-ML-xEF" id="ExB-2V-3Ot"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1058" y="137"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="qDR-Nc-ZhY">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="cWT-un-ncY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PHw-6j-WbM">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Plp-lb-n7z" kind="relationship" relationship="viewControllers" id="uTu-3u-bf8"/>
+                        <segue destination="CVr-Hm-dC2" kind="relationship" relationship="viewControllers" id="jJQ-2R-hXb"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oSM-OC-hVK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2020" y="136.69950738916256"/>
+        </scene>
+        <!--Items-->
+        <scene sceneID="XpL-wC-tMv">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Items" id="CVr-Hm-dC2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="6Yq-UP-qO2"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bnp-yo-Yd3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2269" y="582"/>
+        </scene>
+        <!--Heroes-->
+        <scene sceneID="f5c-4L-DBl">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Heroes" id="Plp-lb-n7z" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="0in-SX-YJl"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NAe-Qw-0So" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1779" y="582"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="640" height="1136"/>
+    </resources>
+</document>
